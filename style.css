@@ -1,34 +1,57 @@
 /* style.css */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-  }
-  
-  h1, h2 {
-    color: #2c3e50;
-  }
-  
-  section {
-    margin: 20px;
-  }
-  
-  footer {
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+section {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Dodatkowy styl dla napisów w sekcjach */
+section h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#terminarz {
+  background-color: #f2f2f2;
+}
+
+#klasy {
+  background-color: #e6f7ff;
+}
+
+#zadania {
+  background-color: #ffe6e6;
+}

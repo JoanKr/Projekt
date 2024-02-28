@@ -10,26 +10,21 @@
 </head>
 <body>
 
-  <header>
+  <header onclick="goToHomePage()">
     <h1>Korepetycje Online</h1>
   </header>
 
-  <section id="terminarz">
+  <section id="terminarz" onclick="openTerminarzPage()">
     <h2>Terminarz</h2>
     <!-- Tutaj dodaj kod dotyczący terminarza -->
   </section>
 
-  <section id="tematy">
-    <h2>Podział na Tematy Lekcji</h2>
-    <!-- Tutaj dodaj kod dotyczący podziału na tematy lekcji -->
-  </section>
-
-  <section id="klasy">
-    <h2>Podział na Klasy</h2>
+  <section id="klasy" onclick="openKlasyPage()">
+    <h2>Klasy</h2>
     <!-- Tutaj dodaj kod dotyczący podziału na klasy -->
   </section>
 
-  <section id="zadania">
+  <section id="zadania" onclick="openZadaniaPage()">
     <h2>Zadania Domowe</h2>
     <!-- Tutaj dodaj kod dotyczący miejsca na zadania domowe -->
   </section>
@@ -39,6 +34,18 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    function openTerminarzPage() {
+      window.location.href = "terminarz.html";
+    }
+
+    function openKlasyPage() {
+      window.location.href = "klasy.html";
+    }
+
+    function openZadaniaPage() {
+      window.location.href = "zadania.html";
+    }
+  </script>
 </body>
 </html>
-
