@@ -1,0 +1,51 @@
+<!-- rejestracja.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korepetycje Online - Rejestracja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <form id="registerForm">
+      <h2>Rejestracja</h2>
+
+      <label for="username">Nazwa użytkownika:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Hasło:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="button" onclick="register()">Zarejestruj się</button>
+    </form>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    async function register() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password, role }),
+      });
+
+      if (response.ok) {
+        alert('Rejestracja zakończona sukcesem!');
+        window.location.href = '/login.html'; // Przekieruj do strony logowania po rejestracji
+      } else {
+        const data = await response.json();
+        alert(data.error);
+      }
+    }
+  </script>
+</body>
+</html>

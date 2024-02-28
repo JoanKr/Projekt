@@ -25,7 +25,6 @@ section {
   text-align: center;
 }
 
-/* Dodatkowy styl dla napisów w sekcjach */
 section h2 {
   display: flex;
   align-items: center;
@@ -54,4 +53,87 @@ footer {
 
 #zadania {
   background-color: #ffe6e6;
+}
+
+#szkola-podstawowa,
+#szkola-srednia {
+  margin-bottom: 20px;
+}
+
+#szkola-podstawowa h3,
+#szkola-srednia h3 {
+  background-color: #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#szkola-podstawowa ul,
+#szkola-srednia ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#szkola-podstawowa ul li,
+#szkola-srednia ul li {
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#szkola-podstawowa ul li:hover,
+#szkola-srednia ul li:hover {
+  background-color: #e0e0e0;
+}
+
+/* Stylizacja formularza logowania i rejestracji */
+
+.container {
+  width: 30%;
+  margin: 100px auto;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0px 0px 10px #4CAF50;
+}
+
+.container h2 {
+  color: #4CAF50;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: calc(100% - 20px); /* zmieniono szerokość */
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }

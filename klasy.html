@@ -17,6 +17,25 @@
   <section id="tytul-strony">
     <h2>Podział na Klasy</h2>
     <!-- Tutaj dodaj kod dotyczący wyświetlania listy klas -->
+    <div id="szkola-podstawowa">
+        <h3>Szkoła Podstawowa</h3>
+        <ul>
+            <li onclick="openKlasyPage('Klasa 1')">Klasa 1</li>
+            <li onclick="openKlasyPage('Klasa 2')">Klasa 2</li>
+            <li onclick="openKlasyPage('Klasa 3')">Klasa 3</li>
+            <!-- Dodaj więcej klas dla Szkoły Podstawowej -->
+        </ul>
+    </div>
+
+    <div id="szkola-srednia">
+        <h3>Szkoła Średnia</h3>
+        <ul>
+            <li onclick="openKlasyPage('Klasa 1')">Klasa 1</li>
+            <li onclick="openKlasyPage('Klasa 2')">Klasa 2</li>
+            <li onclick="openKlasyPage('Klasa 3')">Klasa 3</li>
+            <!-- Dodaj więcej klas dla Szkoły Średniej -->
+        </ul>
+    </div>
   </section>
 
   <footer>
@@ -24,5 +43,20 @@
   </footer>
 
   <script src="main.js"></script>
+
+  <script>
+    // Pobierz parametr zapytania z adresu URL
+    const params = new URLSearchParams(window.location.search);
+    const klasaParam = params.get('klasa');
+
+    // Ustaw tekst aktualnej klasy
+    const aktualnaKlasaElement = document.getElementById('aktualna-klasa');
+    if (klasaParam) {
+      aktualnaKlasaElement.innerText = klasaParam;
+    } else {
+      // Domyślny tekst, jeśli nie ma parametru
+      aktualnaKlasaElement.innerText = 'Brak informacji o klasie';
+    }
+  </script>
 </body>
 </html>
